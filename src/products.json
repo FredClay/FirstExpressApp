@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Hat",
+        "season": "Summer",
+        "year": 2022
+    },
+    {
+        "name": "Cat",
+        "season": "Winter",
+        "year": 2021
+    },
+    {
+        "name": "Rat",
+        "season": "Autumn",
+        "year": 2017
+    },
+    {
+        "name": "Bat",
+        "season": "Spring",
+        "year": 2007
+    }
+]
