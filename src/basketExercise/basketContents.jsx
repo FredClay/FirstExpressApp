@@ -1,10 +1,15 @@
 const BasketItems = ({ allItems, deleteHandler }) => {
     
     const PrintItem = ({itemName, itemQuantity, id}) => <li> 
-        ID: {id} ----- Item Name: {itemName} ----- Quantity: {itemQuantity}
+        
+        <h3>{itemName}</h3>
+        <p>ID: {id} </p>
+        <p>Quantity: {itemQuantity}</p>
         <button onClick={() => deleteHandler(id)}>X</button>
+        <hr></hr>
         </li>
 
+    if (allItems.length === 0) { return <h2>Your basket is currently empty!</h2>}
     return (
         <>
         <ul>

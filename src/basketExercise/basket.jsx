@@ -6,7 +6,7 @@ const Basket = () => {
 
     const [contents, setContents] = useState([]);
     const [itemName, setItemName] = useState('');
-    const [ItemQuantity, setItemQuantity] = useState(0);
+    const [itemQuantity, setItemQuantity] = useState(0);
 
     const submitHandler = (event) => {
         event.preventDefault();
@@ -21,7 +21,7 @@ const Basket = () => {
     }
 
     const handleAdd = () => {
-        setContents(contents => [...contents, {name: itemName, quantity: ItemQuantity}])
+        setContents(contents => [...contents, {name: itemName, quantity: itemQuantity}])
     }
 
     const handleDelete = (id) => {
@@ -33,8 +33,11 @@ const Basket = () => {
 
     return (
         <>
+        <h2>Add your items to your basket:</h2>
         <AddItems submitHandler={submitHandler} addHandler={handleAdd} 
             updateNameHandler={handleUpdate} updateQuantityHandler={handleQuantityUpdate}/>
+        <hr></hr>
+        <h3>Your basket: </h3>
         <BasketItems allItems={contents} deleteHandler={handleDelete}/>
         </>
     )

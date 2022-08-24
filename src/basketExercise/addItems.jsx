@@ -2,9 +2,13 @@ const AddItems = ({submitHandler, updateNameHandler, updateQuantityHandler, addH
 
     return (
         <form onSubmit={submitHandler}>
-        <input type="text" placeholder="Type items here..." onChange={updateNameHandler}/>
-        <input type="number" placeholder="Quantity..." min="0" onChange={updateQuantityHandler}/>
-        <button type="button" onClick={addHandler}>Add Item!</button>
+        <label htmlFor="nameInput">Item Name</label>
+        <input type="text" id="nameInput" placeholder="Type items here..." onChange={updateNameHandler}/>
+        <br></br>
+        <label htmlFor="quantityInput">Item Quantity</label>
+        <input type="number" id="quantityInput" placeholder="Type quantity here..." min="0" onChange={updateQuantityHandler}/>
+        <br></br>
+        <button type="submit" onClick={addHandler}>Add Item!</button>
         </form>
     )
 
