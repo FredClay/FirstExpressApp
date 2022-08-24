@@ -1,11 +1,10 @@
 import './App.css';
-import Counter from './counterExercise/counterExercise';
-
-function App() {
+import Basket from './basketExercise/basket';
+ function App() {
   
   return (
     <>
-    <Counter/>
+      <Basket />
     </>
   );
 
