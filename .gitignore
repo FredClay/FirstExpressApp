@@ -2,6 +2,8 @@
 
 src/GameLiftingState
 
+src/clockLifeCycle
+
 # Images for APP
 src/ImagesToUse
 
