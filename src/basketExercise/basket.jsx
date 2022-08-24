@@ -21,7 +21,7 @@ const Basket = () => {
     }
 
     const handleAdd = () => {
-        setContents(contents => [...contents, {name: itemName, quantity: ItemQuantity])
+        setContents(contents => [...contents, {name: itemName, quantity: ItemQuantity}])
     }
 
     const handleDelete = (id) => {

@@ -1,15 +1,15 @@
 const BasketItems = ({ allItems, deleteHandler }) => {
     
-    const PrintItem = ({itemName, id}) => <li> 
-        ID: {id} ----- Item Name: {itemName} 
+    const PrintItem = ({itemName, itemQuantity, id}) => <li> 
+        ID: {id} ----- Item Name: {itemName} ----- Quantity: {itemQuantity}
         <button onClick={() => deleteHandler(id)}>X</button>
         </li>
 
     return (
         <>
         <ul>
-            {allItems.map((itemName, index) => {
-                return (<PrintItem itemName={itemName} key={index} id={index}/>);
+            {allItems.map(({name, quantity}, index) => {
+                return (<PrintItem itemName={name} itemQuantity={quantity} key={index} id={index}/>);
             })}
         </ul>
         </>
