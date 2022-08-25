@@ -1,15 +1,11 @@
 import './App.css';
-import Basket from './basketExercise/basket';
-import Counter from './learningEffectHooks/counter';
-import HookName from './learningEffectHooks/effectHookName';
-import LessText from './learningEffectHooks/lessText';
-import Shopping from './learningEffectHooks/shopping';
+import Formula1Querier from './httpRequests/Formula1Querier';
 
  function App() {
   
   return (
     <>
-      <Basket/>
+      <Formula1Querier/>
     </>
   );
 
