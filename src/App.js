@@ -1,11 +1,11 @@
 import './App.css';
-import Formula1Querier from './httpRequests/Formula1Querier';
+import HomePage from './OMDB Exercise/HomePage';
 
  function App() {
   
   return (
     <>
-      <Formula1Querier/>
+      <HomePage/>
     </>
   );
 
