@@ -3,11 +3,17 @@ import axios from 'axios';
 
 import SearchBar from "./SearchBar";
 import AllMatches from "./AllMatches";
+import { useLocation } from "react-router-dom";
 
 const HomePage = () => {
 
+    const location = useLocation();
+
     const [searchField, setSearchField] = useState('');
     const [foundMovies, setFoundMovies] = useState([]);
+
+    // location?.state?.searchField
+
 
     const baseURL = 'http://www.omdbapi.com/?apikey=';
     const apiKey = '2d739df9';
