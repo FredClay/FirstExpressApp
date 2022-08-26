@@ -1,6 +1,6 @@
 import PrintMovie from "./PrintMovie";
 
-const AllMatches = ({movies}) => {
+const AllMatches = ({movies, oldSearch}) => {
 
     const {Search} = movies;
 
@@ -16,7 +16,7 @@ const AllMatches = ({movies}) => {
     return (
         <div id="matches">
             {Search.map(({Title, Year, Poster, imdbID}) => 
-                <PrintMovie key={imdbID} Title={Title} Year={Year} Poster={Poster} id={imdbID}/>
+                <PrintMovie key={imdbID} Title={Title} Year={Year} Poster={Poster} id={imdbID} oldSearch={oldSearch}/>
             )}
         </div>
     )

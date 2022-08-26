@@ -8,10 +8,13 @@ import { useLocation } from "react-router-dom";
 const HomePage = () => {
 
     const location = useLocation();
+    
+    console.log(location.state.oldSearch);
 
-    const [searchField, setSearchField] = useState('');
+    const [searchField, setSearchField] = useState(location?.state?.oldSearch || '');
     const [foundMovies, setFoundMovies] = useState([]);
 
+    console.log(searchField);
     // location?.state?.searchField
 
 
@@ -39,7 +42,7 @@ const HomePage = () => {
         <>
             <SearchBar updateHandler={updateHandler} submitHandler={submitHandler} sendSearch={sendSearch} />
             <hr></hr>
-            <AllMatches movies={foundMovies}/>
+            <AllMatches movies={foundMovies} oldSearch={searchField}/>
         </>
 )
 

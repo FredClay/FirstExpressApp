@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import FocusPrintMovie from './FocusPrintMovie';
 
 const MovieDetails = () => {
@@ -11,6 +11,7 @@ const MovieDetails = () => {
     const [focusMovie, setFocusMovie] = useState('');
 
     const navigate = useNavigate();
+    const location = useLocation();
 
     const baseURL = 'http://www.omdbapi.com/?apikey=';
     const apiKey = '2d739df9';
@@ -28,12 +29,12 @@ const MovieDetails = () => {
                     console.log(`${element}: ${focusMovie[element]}`);
             }})
             .catch(err => console.log("Error:- " + err));
-    }, []);
+    }, [id]);
 
     return (
         <>
             
-            <button onClick={() => navigate(-1, {state:{searchField:'batman'}})}>GO BACK</button>
+            <button onClick={() => navigate("/", {state:{oldSearch: location.state.oldSearch}})}>GO BACK</button>
             <hr></hr>
             <div id="result">
                 <img src={focusMovie.Poster} alt={`${focusMovie.Title} poster`}></img>
