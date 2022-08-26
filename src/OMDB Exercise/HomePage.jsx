@@ -9,14 +9,8 @@ const HomePage = () => {
 
     const location = useLocation();
     
-    console.log(location.state.oldSearch);
-
-    const [searchField, setSearchField] = useState(location?.state?.oldSearch || '');
+    const [searchField, setSearchField] = useState('');
     const [foundMovies, setFoundMovies] = useState([]);
-
-    console.log(searchField);
-    // location?.state?.searchField
-
 
     const baseURL = 'http://www.omdbapi.com/?apikey=';
     const apiKey = '2d739df9';
@@ -42,7 +36,7 @@ const HomePage = () => {
         <>
             <SearchBar updateHandler={updateHandler} submitHandler={submitHandler} sendSearch={sendSearch} />
             <hr></hr>
-            <AllMatches movies={foundMovies} oldSearch={searchField}/>
+            <AllMatches movies={foundMovies} />
         </>
 )
 

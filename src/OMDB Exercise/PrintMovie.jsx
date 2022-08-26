@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const PrintMovie = (movie) => {
 
-    const {Title, Year, Poster, id, oldSearch} = movie;
+    const {Title, Year, Poster, id} = movie;
 
     const navigate = useNavigate();
 
@@ -11,7 +11,7 @@ const PrintMovie = (movie) => {
             <h2>{Title}</h2>
             <h3>Release Year: {Year}</h3>
             <img src={Poster} alt={`${Title} poster`}></img>
-            <button onClick={() => navigate(`/details/${id}`, {state: {oldSearch}})}>Details</button>
+            <button onClick={() => navigate(`/details/${id}`)}>Details</button>
             <hr></hr>
         </div>
     )

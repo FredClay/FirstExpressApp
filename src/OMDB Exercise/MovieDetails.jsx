@@ -34,7 +34,7 @@ const MovieDetails = () => {
     return (
         <>
             
-            <button onClick={() => navigate("/", {state:{oldSearch: location.state.oldSearch}})}>GO BACK</button>
+            <button onClick={() => navigate("/")}>GO BACK</button>
             <hr></hr>
             <div id="result">
                 <img src={focusMovie.Poster} alt={`${focusMovie.Title} poster`}></img>
