@@ -1,12 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# Mini Projects
 src/GameLiftingState
-
 src/clockLifeCycle
-
 src/OMDB COPY
-
 src/CRUD application
+src/random components
 
 # Images for APP
 src/ImagesToUse
